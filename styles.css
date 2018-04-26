@@ -14,7 +14,8 @@ h2 {
 }
 
 #grid {
-	margin-top: 15%;
+	margin-top: 8%;
+	margin-bottom: 1.5%;
 	text-align: center;
 }
 
@@ -52,11 +53,20 @@ h2 {
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-	background-color: transparent; !important;
-	border-color: transparent; !important;
+	background-color: transparent !important;
+	border-color: transparent !important;
 	color: black;
 }
 
 i {
+	color: black;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
 	color: black;
 }

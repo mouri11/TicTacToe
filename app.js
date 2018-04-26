@@ -28,6 +28,7 @@ $(document).ready (function() {
 			$("#"+val).html("<span>"+ human +"</span>");
 			$("#"+val).css("padding","3.5% 0");
 			$("#turn").text("Computer's Turn");
+			$("#"+val).css("pointer-events", "none");
 			board[val - 1] = human;
 			console.log(board);
 			if (winning(board, human)) {
@@ -52,14 +53,15 @@ $(document).ready (function() {
 				setTimeout(function() {
 					$("#"+(aiPos+1)).html("<span>"+ ai +"</span>");
 					$("#"+(aiPos+1)).css("padding","3.5% 0");
+					$("#"+(aiPos+1)).css("pointer-events", "none");
 					$("#turn").text("Your Turn");
-				});
+				}, 500);
 
 				if (winning(board, ai)) {
 					setTimeout(function() {
 						alert("You Lose");
 						restart();
-					},500);
+					},600);
 					return;
 				}
 				else if (round === 0) {
@@ -83,6 +85,7 @@ $(document).ready (function() {
 function restart() {
 	$("#turn").text("Your Turn");
 	$.each([1,2,3,4,5,6,7,8,9], function(i,val) {
+		$("#"+val).css("pointer-events","auto");
 		$("#"+val).html("");
 		$("#"+val).css("padding","15% 0");
 	});
