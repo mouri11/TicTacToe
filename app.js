@@ -94,7 +94,7 @@ function restart() {
 	board = [0,1,2,3,4,5,6,7,8];
 }
 
-// the main minimax function
+// the main minimax function, taken from https://github.com/ahmadabdolsaheb/minimaxarticle
 function minimax(newBoard, player){
 	//available spots
 	var free = available(newBoard);
